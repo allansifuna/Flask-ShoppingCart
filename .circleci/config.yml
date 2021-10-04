@@ -3,12 +3,15 @@ version: 2.1
 workflows:
   build-docker-image:
     jobs:
-      -build
+      - build
 
 jobs:
   build:
     docker:
-      -- image: cimg/python:3.7
+      - image: cimg/python:3.7
     steps:
-      -checkout
-      -docker build -t wedassign:latest .
+      - checkout
+      - run: docker build -t wedassign:latest .
+
+
+

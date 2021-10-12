@@ -32,10 +32,3 @@ jobs:
           echo "$DOCKER_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
           docker image tag allan/webassign:latest allanns/webassign:latest
           docker image push allanns/webassign:latest
-jobs:
-  deploy:
-    docker:
-      - image: docker:17.05.0-ce-git
-    steps:
-
-

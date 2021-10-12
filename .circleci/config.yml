@@ -29,6 +29,6 @@ jobs:
       - run:
           name: Push image to docker hub
           command: |
-            docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKER_PASSWORD"
+            docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
             docker image tag allan/webassign:latest allanns/webassign:latest
             docker image push allanns/webassign:latest
